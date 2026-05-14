@@ -68,7 +68,6 @@ export default async (request) => {
   params.append("billing_address_collection", "required");
   params.append("phone_number_collection[enabled]", "true");
   params.append("shipping_address_collection[allowed_countries][0]", "US");
-  params.append("allow_promotion_codes", "true");
   params.append("client_reference_id", size);
   params.append("metadata[size]", size);
   params.append("metadata[shipping_mode]", "standard");
