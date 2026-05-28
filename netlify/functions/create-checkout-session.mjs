@@ -71,6 +71,10 @@ export default async (request) => {
   params.append("client_reference_id", size);
   params.append("metadata[size]", size);
   params.append("metadata[shipping_mode]", "standard");
+  params.append("metadata[order_channel]", "mylarduct_web");
+  params.append("payment_intent_data[metadata][size]", size);
+  params.append("payment_intent_data[metadata][shipping_mode]", "standard");
+  params.append("payment_intent_data[metadata][order_channel]", "mylarduct_web");
 
   if (shippingRateId) {
     params.append("shipping_options[0][shipping_rate]", shippingRateId);
