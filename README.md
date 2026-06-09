@@ -5,7 +5,7 @@ This folder is the standalone deploy root for `mylarduct.com`.
 Project structure:
 
 - `site/` static site files
-- `netlify/functions/` Snipcart config/admin functions plus legacy Stripe utilities
+- `netlify/functions/` Snipcart config and tracking admin functions
 - `netlify.toml` Netlify project config
 
 Current storefront flow:
