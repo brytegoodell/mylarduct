@@ -6,11 +6,6 @@ Netlify environment variables for the current storefront:
 - `SNIPCART_SECRET_API_KEY`
 - `SNIPCART_ADMIN_API_KEY`
 
-Optional:
-
-- `ORDER_LOG_API_KEY`
-  Use this only if you still want the legacy Stripe event viewer to stay protected with the same key.
-
 How the current setup works:
 
 - Standard size cards use Snipcart product buttons directly on the page
@@ -49,4 +44,4 @@ Notes:
 
 - This setup does not generate shipping labels
 - This setup does not use ShipStation
-- Existing direct Stripe Checkout functions remain in the repo as legacy utilities, but the storefront now runs through Snipcart
+- Stripe is used only as the connected payment gateway inside Snipcart
