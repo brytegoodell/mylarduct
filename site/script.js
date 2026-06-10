@@ -171,7 +171,7 @@ const loadSnipcartAssets = async () => {
   snipcartState.loading = false;
   snipcartState.loaded = true;
   setSnipcartStatus(
-    "Secure checkout, taxes, and order confirmation online.",
+    "Secure ordering and order confirmation.",
     "ready"
   );
 
