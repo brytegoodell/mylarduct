@@ -273,8 +273,8 @@ p {
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 1.08fr);
-  gap: 2.4rem;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 1fr);
+  gap: 2rem;
   padding: 4.5rem 0 2.2rem;
   align-items: center;
 }
@@ -378,7 +378,6 @@ h1 {
 
 .hero-visual {
   position: relative;
-  align-self: stretch;
 }
 
 .duct-illustration {
@@ -386,9 +385,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
-  aspect-ratio: 1.32 / 1;
-  padding: 1.1rem;
+  aspect-ratio: 1.42 / 1;
+  padding: 0.95rem;
   border-radius: 22px;
   overflow: hidden;
   background:
@@ -402,7 +400,7 @@ h1 {
   height: 100%;
   object-fit: contain;
   object-position: center center;
-  transform: scale(1.08);
+  transform: scale(1.01);
   filter: none;
 }
 
