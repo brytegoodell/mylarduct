@@ -171,7 +171,7 @@ const loadSnipcartAssets = async () => {
   snipcartState.loading = false;
   snipcartState.loaded = true;
   setSnipcartStatus(
-    "Secure checkout, taxes, and order confirmation through Snipcart. Fulfillment is handled by the manufacturer.",
+    "Secure checkout, taxes, and order confirmation through Snipcart.",
     "ready"
   );
 
@@ -239,19 +239,12 @@ cartTriggers.forEach((trigger) => {
     event.preventDefault();
 
     try {
-      await bootstrapSnipcart();
-      trigger.click();
+      const snipcart = await bootstrapSnipcart();
+      snipcart.api.theme.cart.open();
     } catch (error) {
       window.alert(error.message || "Checkout unavailable.");
     }
   });
 });
 
-fetchSnipcartConfig()
-  .then((config) => {
-    configureSnipcartContainer(config);
-    triggerSnipcartLoadOnInteraction();
-  })
-  .catch((error) => {
-    markSnipcartUnavailable(error.message || "Checkout unavailable.");
-  });
+triggerSnipcartLoadOnInteraction();
